@@ -1,0 +1,92 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bulma CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/8a80b728dc.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+
+  <body class="content">
+    <h2>Task 2: Querying Data</h2>
+    <h3>1. Show all teams in Spain.</h3>
+    <p id="t2q1"></p>
+
+    <h3>2. Show all teams in Madrid, Spain</h3>
+    <p id="t2q2"></p>
+
+    <h3>
+      3. Show all national teams (Remember there might be new national teams
+      added later)
+    </h3>
+    <p id="t2q3"></p>
+
+    <h3>4. Show all teams that are not in Spain</h3>
+    <p id="t2q4"></p>
+
+    <h3>5. Show all teams that are not in Spain or England</h3>
+    <p id="t2q5"></p>
+
+    <h3>6. Show all teams in Spain with more than 700M fans</h3>
+    <p id="t2q6"></p>
+
+    <h3>
+      7. Show all teams with a number of fans in the range of 500M and 600M
+    </h3>
+    <p id="t2q7"></p>
+
+    <h3>8. Show all teams where Ronaldo is a top scorer</h3>
+    <p id="t2q8"></p>
+
+    <h3>9. Show all teams where Ronaldo, Maradona, or Messi is a top scorer</h3>
+    <p id="t2q9"></p>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script>
+      // TODO
+      // Copy **only** your firebaseConfig from Google Firebae and add it below
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCJR5vGssp8P3fw8VCgQbJeTIIW-V6Z2R0",
+        authDomain: "is424-fa24.firebaseapp.com",
+        projectId: "is424-fa24",
+        storageBucket: "is424-fa24.appspot.com",
+        messagingSenderId: "291496419690",
+        appId: "1:291496419690:web:bb07d738187eaa6e5fc513",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // define authentication variable
+      let auth = firebase.auth();
+      let db = firebase.firestore();
+
+      // define a storage reference
+      let ref = firebase.storage().ref();
+    </script>
+    <!-- make sure to add your own js file as the last line in index.html file -->
+    <script src="app.js"></script>
+  </body>
+</html>
